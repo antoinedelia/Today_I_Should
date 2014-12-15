@@ -5,7 +5,7 @@
 	$date = date('Y/m/d', time());
 	include_once("singleton.php");
 	// Get the stuff according to the date (ona day = one stuff)
-	$stuff_test = $bdd->query("Select * From stuff WHERE date_stuff = '$date'");	//Récupère les infos de clients
+	$stuff_test = $bdd->query("Select * From stuff WHERE date_stuff = '$date'");
 	$stuff = $stuff_test->fetch();
 ?>
 
