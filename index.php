@@ -1,7 +1,10 @@
 <?php
+	// Set timezone to Paris (because I'm French, deal with it)
 	date_default_timezone_set('Europe/Paris');
+	// Get the date
 	$date = date('Y/m/d', time());
 	include_once("singleton.php");
+	// Get the stuff according to the date (ona day = one stuff)
 	$stuff_test = $bdd->query("Select * From stuff WHERE date_stuff = '$date'");	//Récupère les infos de clients
 	$stuff = $stuff_test->fetch();
 ?>
@@ -14,18 +17,22 @@
 
 		<title>Today You Should</title>
 
+		<!-- Pure CSS available here : http://purecss.io/ -->
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-    	<!--[if lte IE 8]>
-	        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-	    <![endif]-->
-	    <!--[if gt IE 8]><!-->
-	        <link rel="stylesheet" href="css/layouts/side-menu.css">
-	    <!--<![endif]-->
+
+		<!--[if lte IE 8]>
+	    	<link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+		<![endif]-->
+    	<!--[if gt IE 8]><!-->
+        	<link rel="stylesheet" href="css/layouts/side-menu.css">
+    	<!--<![endif]-->
 	</head>
 	<body>
 	    <div id="main">
 	        <div class="header">
+	        	<!-- The title -->
 	            <h1>Today You Should</h1>
+	            <!-- The slogan -->
 	            <h2>The website that tells you what to do !</h2>
 	        </div>
 

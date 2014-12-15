@@ -19,7 +19,7 @@
 	<body>
 		<?php 
 			include_once("singleton.php"); 
-			$stuff_test = $bdd->query("Select * From stuff WHERE id_stuff = '$_GET[id]'");	//Récupère les infos de clients
+			$stuff_test = $bdd->query("Select * From stuff WHERE id_stuff = '$_GET[id]'");
 			$stuff = $stuff_test->fetch();
 		?>
 	    <div id="main">

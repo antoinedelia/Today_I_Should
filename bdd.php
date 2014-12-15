@@ -25,6 +25,7 @@
 	        </div>
 
 	        <div class="content">
+	        	<!-- Form to add stuff to the DB -->
 	        	<form action="add_stuff.php" method="POST" class="pure-form">
 	        		<label for="name">Nom : </label>
 	        		<br/>
@@ -46,20 +47,22 @@
 
 	        	<br/>
 	        	<br/>
-
+				
+				<!-- Table with ALL the stuff -->
+				
 				<table class="pure-table pure-table-horizontal">
 				    <thead>
 				        <tr>
 				            <th>#</th>
-				            <th>Nom</th>
-				            <th>Modifier</th>
-				            <th>Supprimer</th>
+				            <th>Name</th>
+				            <th>Change</th>
+				            <th>Delete</th>
 				        </tr>
 				    </thead>
 
 				    <tbody>
 				    <?php
-				    $stuff_test = $bdd->query("Select * From stuff");	//Récupère les infos de clients
+				    $stuff_test = $bdd->query("Select * From stuff");
 					$stuff = $stuff_test->fetchAll();
 					$size = sizeof($stuff);
 		        		for ($i=0; $i < $size; $i++) { 
