@@ -3,6 +3,7 @@
 	<head>
 		<title>Today I Should</title>
 		<meta charset="utf8">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 	</head>
 	<body>
 		<h1>Today I Should...</h1>
