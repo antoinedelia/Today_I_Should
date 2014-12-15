@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Today I Should</title>
+		<title>Today You Should</title>
 		
 		<link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
 
@@ -20,12 +20,12 @@
 		<?php include_once("singleton.php"); ?>
 	    <div id="main">
 	        <div class="header">
-	            <h1>Today I Should</h1>
+	            <h1>Today You Should</h1>
 	            <h2>The website that tells you what to do !</h2>
 	        </div>
 
 	        <div class="content">
-	        	<form action="add_stuff.php" method="POST">
+	        	<form action="add_stuff.php" method="POST" class="pure-form">
 	        		<label for="name">Nom : </label>
 	        		<br/>
 	        		<input required type="text" id="name" name="name" placeholder="Nom">
@@ -41,7 +41,7 @@
 	        		<input required type="text" name="image" id="image" size="50" placeholder="URL image">
 	        		<br/>
 	        		<br/>
-	        		<input type="submit" value="Ajouter">
+	        		<input type="submit" value="Ajouter" class="pure-button pure-input-1-5 pure-button-primary">
 	        	</form>
 
 	        	<br/>
@@ -76,7 +76,7 @@
 				    </tbody>
 				</table>    
 				<br/>  
-				<a style="color: #000000"href="http://localhost/Today_I_Should/"><i class="fa fa-home fa-5x"></i></a>
+				<a style="color: #000000"href="http://localhost/Today_You_Should/"><i class="fa fa-home fa-5x"></i></a>
 	        </div>
 	    </div>
 	</body>

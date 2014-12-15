@@ -12,7 +12,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Today I Should</title>
+		<title>Today You Should</title>
 
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     	<!--[if lte IE 8]>
@@ -25,14 +25,14 @@
 	<body>
 	    <div id="main">
 	        <div class="header">
-	            <h1>Today I Should</h1>
+	            <h1>Today You Should</h1>
 	            <h2>The website that tells you what to do !</h2>
 	        </div>
 
 	        <div class="content">
 	            <h2 class="content-subhead"><?php echo $stuff[6] ?></h2>
 	            <h3><a style="color: #000000; text-decoration: none;" href="<?php echo $stuff[5] ?>" target="_blank"><?php echo $stuff[1] ?></a></h3>
-	            <img style="width:400px; height: auto; display: block; margin-left: auto; margin-right: auto;"src="<?php echo $stuff[3] ?>" alt="<?php echo $stuff[1] ?>">
+	            <img class="pure-img" style="width:400px; height: auto; display: block; margin-left: auto; margin-right: auto;"src="<?php echo $stuff[3] ?>" alt="<?php echo $stuff[1] ?>">
 	        	<h4>Description :</h4>
 	        	<p><?php echo $stuff[2]?></p>
 	        </div>

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Today I Should</title>
+		<title>Today You Should</title>
 		
 		<link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
 
@@ -24,7 +24,7 @@
 		?>
 	    <div id="main">
 	        <div class="header">
-	            <h1>Today I Should</h1>
+	            <h1>Today You Should</h1>
 	            <h2>The website that tells you what to do !</h2>
 	        </div>
 
