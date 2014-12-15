@@ -1,3 +1,11 @@
+<?php
+	date_default_timezone_set('Europe/Paris');
+	$date = date('Y/m/d', time());
+	include_once("singleton.php");
+	$stuff_test = $bdd->query("Select * From stuff WHERE date_stuff = '$date'");	//Récupère les infos de clients
+	$stuff = $stuff_test->fetch();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,11 +16,11 @@
 
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     	<!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/layouts/side-menu.css">
-    <!--<![endif]-->
+	        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+	    <![endif]-->
+	    <!--[if gt IE 8]><!-->
+	        <link rel="stylesheet" href="css/layouts/side-menu.css">
+	    <!--<![endif]-->
 	</head>
 	<body>
 	    <div id="main">
@@ -22,25 +30,11 @@
 	        </div>
 
 	        <div class="content">
-	            <h2 class="content-subhead">Watch</h2>
-	            <h3>Drive (2011)</h3>
-	            <img style="width:400px; height: auto; display: block; margin-left: auto; margin-right: auto;"src="http://fr.web.img1.acsta.net/medias/nmedia/18/83/93/95/19803697.jpg" alt="drive_movie">
+	            <h2 class="content-subhead"><?php echo $stuff[6] ?></h2>
+	            <h3><a style="color: #000000; text-decoration: none;" href="<?php echo $stuff[5] ?>" target="_blank"><?php echo $stuff[1] ?></a></h3>
+	            <img style="width:400px; height: auto; display: block; margin-left: auto; margin-right: auto;"src="<?php echo $stuff[3] ?>" alt="<?php echo $stuff[1] ?>">
 	        	<h4>Description :</h4>
-	        	<p>
-	        		Un jeune homme solitaire, "The Driver", conduit le jour à Hollywood pour le cinéma en tant que cascadeur et la nuit pour des truands. Ultra professionnel et peu bavard, il a son propre code de conduite. Jamais il n’a pris part aux crimes de ses employeurs autrement qu’en conduisant - et au volant, il est le meilleur !
-					<br/>
-					<br/>
-					Shannon, le manager qui lui décroche tous ses contrats, propose à Bernie Rose, un malfrat notoire, d’investir dans un véhicule pour que son poulain puisse affronter les circuits de stock-car professionnels. Celui-ci accepte mais impose son associé, Nino, dans le projet. 
-					<br/>
-					<br/>
-					C’est alors que la route du pilote croise celle d’Irene et de son jeune fils. Pour la première fois de sa vie, il n’est plus seul.
-					<br/>
-					<br/>
-					Lorsque le mari d’Irene sort de prison et se retrouve enrôlé de force dans un braquage pour s’acquitter d’une dette, il décide pourtant de lui venir en aide. L’expédition tourne mal…
-					<br/>
-					<br/>
-					Doublé par ses commanditaires, et obsédé par les risques qui pèsent sur Irene, il n’a dès lors pas d’autre alternative que de les traquer un à un…
-				</p>
+	        	<p><?php echo $stuff[2]?></p>
 	        </div>
 	    </div>
 	</body>
