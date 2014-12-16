@@ -17,6 +17,8 @@
 
 		<title>Today You Should</title>
 
+		<link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+
 		<!-- Pure CSS available here : http://purecss.io/ -->
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 
@@ -31,9 +33,15 @@
 	    <div id="main">
 	        <div class="header">
 	        	<!-- The title -->
-	            <h1>Today You Should</h1>
+	            <h1><a style="text-decoration: none; color: #333" href="index.php">Today You Should</a></h1>
 	            <!-- The slogan -->
 	            <h2>The website that tells you what to do !</h2>
+	            <h5>Alpha 0.0.1</h5>
+	            <a style="color: #000000" href="http://localhost/Today_You_Should/bdd.php"><i class="fa fa-database fa-5x"></i></a>
+				<br/>
+				<br/>
+				<br/>
+
 	        </div>
 
 	        <div class="content">
