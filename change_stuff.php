@@ -34,6 +34,7 @@
 	        			<legend>Change stuff</legend>
 
 		        		<input type="hidden" name="id_hidden" id="id_hidden" value="<?php echo $_GET['id'];?>">
+		        		<input type="hidden" name="name_hidden" id="name_hidden" value="<?php echo $stuff[1] ?>">
 		        		<label for="name">Nom : </label>
 		        		<br/>
 		        		<input type="text" id="name" name="name" placeholder="Nom" value="<?php echo $stuff[1] ?>">
@@ -62,7 +63,7 @@
 		        		<label for="cat">Catégorie : </label>
 		        		<br/>
 	        			<select name="cat" id="cat">
-							<option value="movie">Movie</option>
+							<option value="Movie">Movie</option>
 							<option value="TV">TV</option>
 							<option value="Book">Book</option>
 							<option value="Game">Game</option>
@@ -75,7 +76,7 @@
 	        	</form>
 	        	<br/>
 	        	<br/>
-	        	<a style="color: #000000"href="http://localhost/Today_You_Should/bdd.php"><i class="fa fa-home fa-5x"></i></a>
+	        	<a style="color: #000000"href="http://localhost/Today_You_Should/bdd.php"><i class="fa fa-arrow-circle-o-left fa-5x"></i></a>
 	        </div>
 	    </div>
 	</body>

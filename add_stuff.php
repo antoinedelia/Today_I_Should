@@ -18,26 +18,33 @@
 			$arr = explode("1.5", substr($node->getAttribute('srcset'), 2));
 			$first = $arr[0];
 			$img = $first;
-			echo $img;
 			$first=false;
 		}
 	}
 ?>
 
-<img src="<?php echo $img ?>" alt="smb">
-
 <?php
 
-	$req = $bdd->prepare('INSERT INTO stuff (name_stuff, description_stuff, image_stuff, date_stuff, wikipedia_stuff, category_stuff) 
-	VALUES (?, ?, ?, ?, ?, ?)');
-	
-	$req->execute(array(
-		$name,
-		$description,
-		$img,
-		$_POST['date'],
-		$wiki,
-		$_POST['cat']
-	));
-	header("Location: bdd.php");
+	$wiki_db = $bdd->query("SELECT * FROM stuff");
+	$add=true;
+	foreach ($wiki_db as $key => $value)
+		if($value['wikipedia_stuff'] == $wiki)
+			$add=false;
+
+	if ($add) {
+		$req = $bdd->prepare('INSERT INTO stuff (name_stuff, description_stuff, image_stuff, date_stuff, wikipedia_stuff, category_stuff) 
+		VALUES (?, ?, ?, ?, ?, ?)');
+		
+		$req->execute(array(
+			$name,
+			$description,
+			$img,
+			$_POST['date'],
+			$wiki,
+			$_POST['cat']
+		));
+		header("Location: bdd.php");
+	}
+	else
+		header("Location: bdd.php?error=name_already_in_db");
 ?>

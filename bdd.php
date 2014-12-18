@@ -43,8 +43,10 @@
 	        	<form action="add_stuff.php" method="POST" class="pure-form">
 	        		<fieldset class="pure-group">
 	        			<legend>Add stuff</legend>
+	        			<p style="display:<?php if(isset($_GET['error'])){ if($_GET['error']=="name_already_in_db"){ ?>block<?php } else{?> none <?php }} else{ ?>none<?php } ?>; color:red;">Nom déjà utilisé !</p>
 	        			<label for="wiki">Wikipedia : </label>
 		        		<br/>
+		        		<p style="display:<?php if(isset($_GET['error'])){ if($_GET['error']=="wiki_already_in_db"){ ?>block<?php } else{?> none <?php }} else{ ?>none<?php } ?>; color:red;">Article déjà utilisé !</p>
 	        			<input required type="text" name="wiki" id="wiki">
 	        			<br/>
 		        		<br/>

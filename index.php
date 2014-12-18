@@ -47,7 +47,7 @@
 	        <div class="content">
 	            <h2 class="content-subhead"><?php echo $stuff[6] ?></h2>
 	            <h3><a style="color: #000000; text-decoration: none;" href="<?php echo $stuff[5] ?>" target="_blank"><?php echo $stuff[1] ?></a></h3>
-	            <img class="pure-img" style="width:400px; height: auto; display: block; margin-left: auto; margin-right: auto;"src="<?php echo $stuff[3] ?>" alt="<?php echo $stuff[1] ?>">
+	            <img class="pure-img" style="width:400px; height: auto; display: block; margin-left: auto; margin-right: auto;"src="http://<?php echo $stuff[3] ?>" alt="<?php echo $stuff[1] ?>">
 	        	<h4>Description :</h4>
 	        	<p><?php echo $stuff[2]?></p>
 	        </div>
